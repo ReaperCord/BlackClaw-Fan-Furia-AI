@@ -5,6 +5,12 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
+  background-image: url(./assets/bg-image.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  
   background-color: #242424;
 
   font-synthesis: none;
@@ -25,7 +31,9 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
