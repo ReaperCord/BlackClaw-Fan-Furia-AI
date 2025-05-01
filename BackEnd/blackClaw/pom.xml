@@ -44,7 +44,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
+			<artifactId>flyway-maven-plugin</artifactId>
+			<version>10.8.1</version>
 		</dependency>
 
 		<dependency>
