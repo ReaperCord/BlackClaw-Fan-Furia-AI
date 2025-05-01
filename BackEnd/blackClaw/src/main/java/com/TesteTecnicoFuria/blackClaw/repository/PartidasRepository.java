@@ -1,7 +1,7 @@
 package com.TesteTecnicoFuria.blackClaw.repository;
 
-import com.TesteTecnicoFuria.blackClaw.model.PartidasModel;
+import com.TesteTecnicoFuria.blackClaw.Entity.Partidas;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PartidasRepository extends JpaRepository<PartidasModel, Long> {
+public interface PartidasRepository extends JpaRepository<Partidas, Long> {
 }

@@ -1,4 +1,4 @@
-package com.TesteTecnicoFuria.blackClaw.model;
+package com.TesteTecnicoFuria.blackClaw.Entity;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 

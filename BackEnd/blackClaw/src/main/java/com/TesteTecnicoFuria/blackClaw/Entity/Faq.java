@@ -1,16 +1,16 @@
-package com.TesteTecnicoFuria.blackClaw.model;
+package com.TesteTecnicoFuria.blackClaw.Entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "faq_loja")
-public class FaqModel {
+@Getter
+@Setter
+public class Faq {
 
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)

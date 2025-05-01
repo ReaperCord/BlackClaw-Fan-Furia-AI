@@ -1,4 +1,4 @@
-package com.TesteTecnicoFuria.blackClaw.model;
+package com.TesteTecnicoFuria.blackClaw.Entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "mapas")
-public class MapasModel {
+public class Mapas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class MapasModel {
 
     @ManyToOne
     @JoinColumn(name = "partidas_id")
-    private PartidasModel partida;
+    private Partidas partida;
 
     @Column(name = "nome_mapa")
     private String nomeMapa;
@@ -32,11 +32,11 @@ public class MapasModel {
         this.id = id;
     }
 
-    public PartidasModel getPartida() {
+    public Partidas getPartida() {
         return partida;
     }
 
-    public void setPartida(PartidasModel partida) {
+    public void setPartida(Partidas partida) {
         this.partida = partida;
     }
 

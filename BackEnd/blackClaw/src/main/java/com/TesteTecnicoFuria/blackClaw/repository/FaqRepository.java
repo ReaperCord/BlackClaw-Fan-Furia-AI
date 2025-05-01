@@ -1,7 +1,7 @@
 package com.TesteTecnicoFuria.blackClaw.repository;
 
-import com.TesteTecnicoFuria.blackClaw.model.FaqModel;
+import com.TesteTecnicoFuria.blackClaw.Entity.Faq;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface FaqRepository extends JpaRepository<FaqModel, Long> {
+public interface FaqRepository extends JpaRepository<Faq, Long> {
 }
