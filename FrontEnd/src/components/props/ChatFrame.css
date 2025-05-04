@@ -1,5 +1,5 @@
 .frame-body {
-    width: 100%;
+    width: 90dvw;
     max-width: 900px; /* Limita a largura no PC */
     height: 70vh; /* Ajusta a altura para 90% da altura da tela */
     min-height: fit-content;
@@ -18,7 +18,7 @@
 }
 
 .ask-bar{
-    width: 100%;
+    width: auto;
     height: fit-content;
     
     background-color: #2C2B2B;
@@ -67,7 +67,7 @@
 }
 
 .text-area{
-    width: 92%;
+    width: 100%;
     max-width: 800px; /* Limitando a largura da área de texto */
     height: auto;
     

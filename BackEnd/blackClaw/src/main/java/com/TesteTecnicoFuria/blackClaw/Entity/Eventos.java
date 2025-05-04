@@ -37,5 +37,4 @@ public class Eventos {
 
     @OneToMany(mappedBy = "evento", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Partidas> partidas;
-
 }

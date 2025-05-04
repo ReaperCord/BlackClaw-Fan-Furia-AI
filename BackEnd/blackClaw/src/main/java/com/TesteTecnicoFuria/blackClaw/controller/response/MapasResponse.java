@@ -1,5 +1,6 @@
 package com.TesteTecnicoFuria.blackClaw.controller.response;
 
+import com.TesteTecnicoFuria.blackClaw.Entity.Partidas;
 import lombok.Builder;
 
 import java.util.List;

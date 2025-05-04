@@ -39,15 +39,14 @@ public class ResultadosMapper {
 
     public static ResultadosResponse toResultadosResponse(Resultados resultados) {
 
-        // Mapeando jogador
-        List<JogadoresResponse> jogadoresResponse = resultados.getJogador().stream()
-                .map(JogadoresMapper::toJogadorResponse)  // Mapeia cada jogador para JogadoresResponse
+        // Converte a lista de jogadores em uma lista de IDs
+        List<Long> jogadorIds = resultados.getJogador().stream()
+                .map(Jogadores::getId)
                 .collect(Collectors.toList());
 
-        // Mapeando mapa
-        MapasResponse mapaResponse = MapasMapper.mapasResponse(resultados.getMapa());
+        // Converte o mapa (único) para ID, se existir
+        Long mapaId = resultados.getMapa() != null ? resultados.getMapa().getId() : null;
 
-        // Retornando a resposta
         return ResultadosResponse.builder()
                 .id(resultados.getId())
                 .abates(resultados.getAbates())
@@ -56,8 +55,8 @@ public class ResultadosMapper {
                 .adr(resultados.getAdr())
                 .kast(resultados.getKast())
                 .rating(resultados.getRating())
-                .jogadorId(jogadoresResponse)
-                .mapaId(mapaResponse.id())
+                .jogadorId(jogadorIds)
+                .mapaId(mapaId)
                 .build();
     }
 }

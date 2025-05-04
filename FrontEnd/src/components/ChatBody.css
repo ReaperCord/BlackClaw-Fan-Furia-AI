@@ -8,7 +8,7 @@ body {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    max-width: 880px;
+    max-width: fit-content;
     min-width: 324px;
     max-height: 740px;
     min-height: 85vh;
@@ -25,7 +25,7 @@ body {
 @media (max-width: 1024px) {
     body {
         padding: 24px;
-        max-width: 800px;
+        max-width: fit-content;
         min-width: 280px;
         max-height: 80vh;
     }
@@ -35,7 +35,7 @@ body {
 @media (max-width: 768px) {
     body {
         padding: 18px;
-        max-width: 95%;
+        max-width: fit-content;
         min-width: 240px;
         max-height: 85vh;
     }
@@ -45,7 +45,7 @@ body {
 @media (max-width: 480px) {
     body {
         padding: 12px;
-        max-width: 100%;
+        max-width: fit-content;
         min-width: 200px;
         max-height: 90vh;
         box-shadow: none; /* Retira a sombra para telas pequenas */

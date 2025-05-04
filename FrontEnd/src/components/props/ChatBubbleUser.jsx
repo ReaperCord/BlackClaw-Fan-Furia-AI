@@ -1,11 +1,12 @@
 import React from 'react'
+import './ChatBubbleUser.css';
 
-const ChatBubbleUser = (mensagem) => {
+function ChatBubbleUser({ message }) {
     return (
-        <div className='bubble-text-user'>
-            <p>{mensagem.user}</p>
+        <div className="bubble-text-user">
+            {message}
         </div>
-    )
+    );
 }
 
-export default ChatBubbleUser
+export default ChatBubbleUser;

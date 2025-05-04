@@ -1,11 +1,20 @@
 import React from 'react'
+import './ChatBubbleAi.css';
 
-const ChatBubbleAi = (mensagem) => {
+function ChatBubbleAi({ message, isLoading = false }) {
     return (
-        <div className='bubble-text-ai'>
-            <p>{mensagem.ai}</p>
+        <div className="bubble-text-ai">
+            {isLoading ? (
+                <div className="loading-dots">
+                    <span>.</span>
+                    <span>.</span>
+                    <span>.</span>
+                </div>
+            ) : (
+                message
+            )}
         </div>
-    )
+    );
 }
 
-export default ChatBubbleAi
+export default ChatBubbleAi;

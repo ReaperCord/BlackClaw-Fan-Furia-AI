@@ -4,10 +4,11 @@ import com.TesteTecnicoFuria.blackClaw.Entity.Partidas;
 import com.TesteTecnicoFuria.blackClaw.controller.request.PartidasRequest;
 import com.TesteTecnicoFuria.blackClaw.controller.response.PartidasResponse;
 
+import java.util.List;
+
 public class PartidasMapper {
 
     public static Partidas partidas(PartidasRequest partidasRequest) {
-
         return Partidas.builder()
                 .adversario(partidasRequest.adversario())
                 .dataPartida(partidasRequest.dataPartida())
@@ -21,6 +22,12 @@ public class PartidasMapper {
                 .adversario(partidas.getAdversario())
                 .dataPartida(partidas.getDataPartida())
                 .duracaoPartida(partidas.getDuracaoPartidaHH())
+                .eventosId(partidas.getEvento() != null ?
+                        List.of(partidas.getEvento().getId()) :
+                        null)
+                .mapasId(partidas.getMapas() != null ?
+                        partidas.getMapas().stream().map(mapa -> mapa.getId()).toList() :
+                        null)
                 .build();
     }
 }

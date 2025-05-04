@@ -32,12 +32,27 @@ public class JogadoresMapper {
                 .nome(jogadores.getNome())
                 .nickname(jogadores.getNickname())
                 .idade(jogadores.getIdade())
-                .funcoesInGame(jogadores.getFuncoesInGame().name())  // Convertendo Enum de volta para String
+                .funcoesInGame(jogadores.getFuncoesInGame())
                 .dataDeEntrada(jogadores.getDataDeEntrada().atStartOfDay())
                 .dataDeSaida(jogadores.getDataDeSaida().atStartOfDay())
                 .nacionalidade(jogadores.getNacionalidade())
                 .duracaoContrato(jogadores.getDuracaoContrato())
-                .tipoDeContrato(jogadores.getTipoDeContrato().name())  // Convertendo Enum de volta para String
+                .tipoDeContrato(jogadores.getTipoDeContrato())
+                .build();
+    }
+
+    public static JogadoresResponse jogadoresResponse(Jogadores jogadores) {
+        return JogadoresResponse.builder()
+                .id(jogadores.getId())
+                .nome(jogadores.getNome())
+                .nickname(jogadores.getNickname())
+                .idade(jogadores.getIdade())
+                .funcoesInGame(jogadores.getFuncoesInGame())
+                .dataDeEntrada(jogadores.getDataDeEntrada().atStartOfDay())
+                .dataDeSaida(jogadores.getDataDeSaida().atStartOfDay())
+                .nacionalidade(jogadores.getNacionalidade())
+                .duracaoContrato(jogadores.getDuracaoContrato())
+                .tipoDeContrato(jogadores.getTipoDeContrato())
                 .build();
     }
 }
